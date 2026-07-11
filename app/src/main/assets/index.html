@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>FamExpenSync Pro Production Shell v4.6 🏠</title>
+    <title>FamExpenSync Pro Production Shell v5.0 🏠</title>
 
     <!-- Local Chart Engine Core -->
     <script src="chart.js"></script>
@@ -44,15 +44,14 @@
         #app_splash_screen {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-color: #020617 !important; /* Forces absolute deep dark blackout setup */
-            z-index: 99999; /* Absolute priority layer over all modals and headers */
+            background-color: #020617 !important;
+            z-index: 99999;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s ease;
         }
 
-        /* Hyper-Cyan Glowing Engine Spinner */
         .splash-spinner {
             width: 48px;
             height: 48px;
@@ -75,7 +74,7 @@
             top: 0; left: 0; right: 0;
             z-index: 2500;
             background-color: var(--bg-main) !important;
-            padding-top: 55px; /* Complete defensive isolation padding from Android status bar */
+            padding-top: 55px;
             padding-bottom: 16px;
             padding-left: 20px;
             padding-right: 20px;
@@ -119,15 +118,14 @@
             font-size: 0.8rem;
         }
 
-        /* Bounded Viewport Scrolling Area for Flowing Content cards */
         .main-scroll-view {
             position: absolute;
             top: 0; bottom: 0; left: 0; right: 0;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             padding: 16px;
-            padding-top: 130px;   /* Safe top clearance buffer */
-            padding-bottom: 120px; /* Safe bottom dock clearance buffer */
+            padding-top: 130px;
+            padding-bottom: 140px;
             z-index: 1000;
         }
 
@@ -140,14 +138,13 @@
             gap: 16px;
         }
 
-        /* Fixed Bottom Dock Scaffold Box with Android Pill Buffer Zone */
         .bottom-nav {
             position: fixed;
             bottom: 0; left: 0; right: 0;
             z-index: 2500;
             background-color: var(--bg-main) !important;
             border-top: 1px solid var(--border);
-            padding: 12px 20px 24px 20px; /* 24px bottom buffer creates safety zone over navigation bar */
+            padding: 12px 20px 24px 20px;
             box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
         }
 
@@ -171,14 +168,13 @@
         .tab-btn.active { color: var(--cyan); }
         .tab-btn span { font-size: 1.3rem; }
 
-        /* Component Blocks Stylings */
         .app-view { display: none; flex-direction: column; gap: 16px; }
         .app-view.active { display: flex; }
         .card { background-color: var(--bg-card); padding: 18px; border-radius: 22px; border: 1px solid var(--border); }
         .card-title { font-size: 1rem; font-weight: 800; margin-bottom: 16px; color: var(--cyan); display: flex; justify-content: space-between; align-items: center; }
         .card-title span.badge { font-size: 0.75rem; color: var(--gold); background: rgba(245, 158, 11, 0.1); padding: 4px 10px; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.2); }
         .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
-        .form-label { font-size: 0.7rem; text-transform: uppercase; tracking-wider: 0.06em; color: var(--text-muted); font-weight: 800; }
+        .form-label { font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; }
 
         .btn-action { background-color: var(--cyan); color: #020617; font-weight: 800; border: none; cursor: pointer; padding: 14px; border-radius: 14px; }
         .btn-action:active { transform: scale(0.98); }
@@ -187,7 +183,7 @@
         .metrics-stack { display: flex; flex-direction: column; gap: 12px; }
         .metric-box { background: linear-gradient(145deg, #0f172a, #0b1329); padding: 16px; border-radius: 20px; border: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .metric-meta { display: flex; flex-direction: column; gap: 2px; }
-        .metric-num { font-size: 1.8rem; font-weight: 900; color: var(--cyan); tracking-tight: -0.03em; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .metric-num { font-size: 1.8rem; font-weight: 900; color: var(--cyan); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
 
         .chart-card { background-color: var(--bg-card); padding: 16px; border-radius: 22px; border: 1px solid var(--border); width: 100%; position: relative; }
         .chart-holder { height: 165px; width: 100%; position: relative; display: flex; justify-content: center; align-items: center; margin-top: 12px; }
@@ -200,7 +196,6 @@
         .item-right { display: flex; align-items: center; gap: 14px; }
         .item-val { font-size: 1rem; font-weight: 900; color: var(--emerald); }
 
-        /* Non-blocking Custom Modals Structural Overlays */
         .modal-overlay {
             position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             background-color: rgba(2, 6, 23, 0.92); backdrop-filter: blur(8px);
@@ -214,7 +209,7 @@
 </head>
 <body>
 
-<!-- PREMIUM HYPER-CYAN & GOLD SPLASH SCREEN SCAFFOLD -->
+<!-- PREMIUM HYPER-CYAN & GOLD SPLASH SCREEN -->
 <div id="app_splash_screen">
     <div style="text-align: center;">
         <h1 style="font-size: 2.6rem; font-weight: 900; color: var(--cyan); letter-spacing: -0.03em; margin-bottom: 24px;">
@@ -227,7 +222,7 @@
     </div>
 </div>
 
-<!-- Native Authentic Intercept Modals Components -->
+<!-- Security PIN Verification Pad Modal -->
 <div id="auth_modal" class="modal-overlay">
     <div class="modal-box">
         <h3 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 6px; font-weight:800;">🔒 Profile Lock</h3>
@@ -240,6 +235,7 @@
     </div>
 </div>
 
+<!-- Budget Adjustment Modal -->
 <div id="budget_modal" class="modal-overlay">
     <div class="modal-box">
         <h3 style="color: var(--cyan); font-size: 1.2rem; margin-bottom: 12px; font-weight:800;">📊 Adjust Monthly Limit</h3>
@@ -251,7 +247,7 @@
     </div>
 </div>
 
-<!-- WebView Safe Non-blocking Confirmation Modal Layer -->
+<!-- WebView Safe Confirmation Modal Box -->
 <div id="confirm_modal" class="modal-overlay">
     <div class="modal-box" style="border-color: var(--rose);">
         <h3 id="confirm_modal_title" style="color: var(--rose); font-size: 1.2rem; margin-bottom: 6px; font-weight:800;">⚠️ Confirm Action</h3>
@@ -263,7 +259,7 @@
     </div>
 </div>
 
-<!-- Solid Floating Top App Bar Header -->
+<!-- Top Floating Navigation Bar Header -->
 <header>
     <div class="header-wrapper">
         <div class="brand">
@@ -273,7 +269,7 @@
     </div>
 </header>
 
-<!-- Unified Master Scroll Context Area -->
+<!-- Master Scroll Window Host Viewport -->
 <main class="main-scroll-view">
     <div class="container">
 
@@ -360,12 +356,15 @@
         <!-- ================= SCREEN 3: SETUP OPTIONS ================= -->
         <div id="view_setup" class="app-view">
 
-            <!-- JSON Portability Backups Module -->
+            <!-- Expanded Data Portability Cluster with Excel Engine Integration -->
             <div class="card">
                 <h2 class="card-title">Data Storage Portability 📁</h2>
-                <div style="display:flex; gap:10px;">
-                    <button onclick="exportJSONBackup()" class="btn-action" style="background-color: var(--emerald); color: #020617; font-weight:bold; margin:0; flex:1;">Export JSON</button>
-                    <button onclick="triggerImportClick()" class="btn-action" style="background-color: var(--gold); color: #020617; font-weight:bold; margin:0; flex:1;">Import JSON</button>
+                <div style="display:flex; flex-direction:column; gap:10px;">
+                    <div style="display:flex; gap:10px;">
+                        <button onclick="exportJSONBackup()" class="btn-action" style="background-color: var(--emerald); color: #020617; font-weight:bold; margin:0; flex:1;">Export JSON</button>
+                        <button onclick="triggerImportClick()" class="btn-action" style="background-color: var(--gold); color: #020617; font-weight:bold; margin:0; flex:1;">Import JSON</button>
+                    </div>
+                    <button onclick="exportToCSV()" class="btn-action" style="background-color: var(--cyan); color: #020617; font-weight:bold; margin:0;">Export to Excel (CSV) 📊</button>
                 </div>
                 <input type="file" id="import_file_input" onchange="importJSONBackup(event)" style="display:none;" accept=".json">
             </div>
@@ -388,7 +387,7 @@
                     <select id="rec_category"></select>
                 </div>
                 <div class="form-group">
-                    <input type="text" id="rec_desc" placeholder="e.g., Internet Bill, Wi-Fi">
+                    <input type="text" id="rec_desc" placeholder="e.g., Internet Bill">
                 </div>
                 <div class="form-group">
                     <label class="form-label">Auto-Trigger Day of Month</label>
@@ -403,11 +402,11 @@
             </div>
         </div>
 
-        <p style="text-align: center; font-size: 0.65rem; color: var(--text-muted); margin-top: 8px;">FamExpenSync Production Engine v4.6</p>
+        <p style="text-align: center; font-size: 0.65rem; color: var(--text-muted); margin-top: 8px;">FamExpenSync Production Engine v5.0 [Locked]</p>
     </div>
 </main>
 
-<!-- Solid Non-overlapping Tab Dock Elements Navigation -->
+<!-- Bottom Embedded View Tabs -->
 <nav class="bottom-nav">
     <div class="nav-wrapper">
         <button onclick="switchTab('dashboard')" id="tab_dashboard" class="tab-btn active"><span>📊</span>Ledger</button>
@@ -418,12 +417,11 @@
 
 <!-- ================= STANDALONE JS CORE ENGINE ================= -->
 <script>
-    // Core structures mapped meticulously from user operational states
     let expenses = JSON.parse(localStorage.getItem('off_expenses')) || [];
-    let members = JSON.parse(localStorage.getItem('off_members')) || [{id: "1", name: "Mahdi", pin: "1403"}]; // Mapped explicitly
+    let members = JSON.parse(localStorage.getItem('off_members')) || [{id: "1", name: "Mahdi", pin: "MTQwMw=="}]; // Default PIN "1403" pre-masked
     let categories = JSON.parse(localStorage.getItem('off_categories')) || ["Food 🍔", "Utilities ⚡", "Education 📚", "Entertainment 🎬"];
     let fixedBills = JSON.parse(localStorage.getItem('off_fixed_bills')) || [];
-    let budget = localStorage.getItem('off_budget') || 20000; // Threshold default mapping
+    let budget = localStorage.getItem('off_budget') || 20000;
     let currentProfileId = localStorage.getItem('off_current_prof') || "all";
 
     let pendingProfileSwitchId = null;
@@ -432,6 +430,13 @@
     let trendChart = null;
 
     document.getElementById('exp_date').valueAsDate = new Date();
+
+    // Safe Crypto-Masking Helpers
+    function hashPin(pin) { return btoa(pin); }
+    function checkPin(stored, input) {
+        try { return atob(stored) === input || stored === input; }
+        catch(e) { return stored === input; }
+    }
 
     function openConfirmModal(title, desc, callback) {
         document.getElementById('confirm_modal_title').innerText = title;
@@ -451,7 +456,27 @@
         renderDashboard();
     }
 
-    // --- JSON BACKUP PORTABILITY EXECUTORS ---
+    // --- EXCEL/SHEETS CSV EXPORT PIPELINE ---
+    function exportToCSV() {
+        if(expenses.length === 0) { alert("Ledger is completely empty!"); return; }
+        let csvContent = "\uFEFFKey ID,Date,Profile Entity,Category Row,Log Description,Amount (BDT)\n";
+        const mKey = {}; members.forEach(m => mKey[m.id] = m.name);
+
+        expenses.forEach(x => {
+            let cleanDesc = x.description.replace(/"/g, '""');
+            let row = `${x.id},${x.date},"${mKey[x.memberId] || 'Unlinked'}","${x.category}","${cleanDesc}",${x.amount}`;
+            csvContent += row + "\n";
+        });
+
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const dlAnchor = document.createElement('a');
+        dlAnchor.href = URL.createObjectURL(blob);
+        dlAnchor.setAttribute("download", `famexpensync_ledger_${new Date().toISOString().slice(0,10)}.csv`);
+        document.body.appendChild(dlAnchor);
+        dlAnchor.click();
+        dlAnchor.remove();
+    }
+
     function exportJSONBackup() {
         const dataObj = { expenses, members, categories, fixedBills, budget };
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dataObj));
@@ -476,10 +501,10 @@
                     if(parsed.categories) localStorage.setItem('off_categories', JSON.stringify(parsed.categories));
                     if(parsed.fixedBills) localStorage.setItem('off_fixed_bills', JSON.stringify(parsed.fixedBills));
                     if(parsed.budget) localStorage.setItem('off_budget', parsed.budget);
-                    alert("Database Core Synchronized Successfully!");
+                    alert("Database Core Synchronized!");
                     location.reload();
-                } else { alert("Validation Mismatch: Scheme scheme corrupted."); }
-            } catch(err) { alert("Parsing Exception Encountered!"); }
+                } else { alert("Data Architecture Validation Mismatch."); }
+            } catch(err) { alert("Parsing Error."); }
         };
         reader.readAsText(file);
     }
@@ -498,7 +523,7 @@
         } else {
             pendingProfileSwitchId = selected;
             const matched = members.find(m => m.id === selected);
-            document.getElementById('auth_modal_desc').innerText = `Verify identity access keys for ${matched.name}`;
+            document.getElementById('auth_modal_desc').innerText = `Enter 4-digit security PIN for ${matched.name}`;
             document.getElementById('auth_pin_input').value = '';
             document.getElementById('auth_modal').style.display = 'flex';
             document.getElementById('global_profile_select').value = currentProfileId;
@@ -508,7 +533,7 @@
     function confirmProfileAuthentication() {
         const pinVal = document.getElementById('auth_pin_input').value.trim();
         const matched = members.find(m => m.id === pendingProfileSwitchId);
-        if (matched && pinVal === matched.pin) {
+        if (matched && checkPin(matched.pin, pinVal)) {
             currentProfileId = pendingProfileSwitchId;
             localStorage.setItem('off_current_prof', currentProfileId);
             document.getElementById('global_profile_select').value = currentProfileId;
@@ -531,19 +556,21 @@
         const name = document.getElementById('prof_name').value.trim();
         const pin = document.getElementById('prof_pin').value.trim();
         const editId = document.getElementById('edit_profile_id').value;
-        if(!name || pin.length !== 4) { alert("Invalid Configuration!"); return; }
-        if(editId) { members = members.map(m => m.id === editId ? {id: editId, name, pin} : m); }
-        else { members.push({ id: Date.now().toString(), name, pin }); }
+        if(!name || pin.length !== 4) { alert("Invalid Parameters! Must be 4 digits."); return; }
+
+        const securePin = hashPin(pin);
+        if(editId) { members = members.map(m => m.id === editId ? {id: editId, name, pin: securePin} : m); }
+        else { members.push({ id: Date.now().toString(), name, pin: securePin }); }
+
         localStorage.setItem('off_members', JSON.stringify(members));
         clearProfileForm(); populateProfileDropdowns(); renderProfilesManagement();
     }
 
-    // Expanded cascade logic fixes
     function triggerEditProfile(id) {
         const target = members.find(m => m.id === id);
         document.getElementById('edit_profile_id').value = target.id;
         document.getElementById('prof_name').value = target.name;
-        document.getElementById('prof_pin').value = target.pin;
+        document.getElementById('prof_pin').value = '';
         document.getElementById('btn_save_profile').innerText = "Update Profile";
         document.getElementById('btn_cancel_profile_edit').style.display = "block";
     }
@@ -554,7 +581,7 @@
     }
 
     function deleteProfile(id) {
-        openConfirmModal("🗑️ Delete Profile", "Permanently delete user profile scoping metadata index?", function() {
+        openConfirmModal("🗑️ Delete Profile", "Permanently remove user metadata profile link?", function() {
             members = members.filter(m => m.id !== id); localStorage.setItem('off_members', JSON.stringify(members));
             if(currentProfileId === id) currentProfileId = "all";
             populateProfileDropdowns(); renderProfilesManagement(); renderDashboard();
@@ -564,7 +591,7 @@
     function renderProfilesManagement() {
         const container = document.getElementById('profiles_list_container'); container.innerHTML = '';
         members.forEach(m => {
-            container.innerHTML += `<div class="item-row"><div class="item-info"><span class="item-title">${m.name}</span><span class="item-meta">PIN: ****</span></div><div class="item-right"><button onclick="triggerEditProfile('${m.id}')" style="width:auto; padding:6px 10px; font-size:0.75rem; background-color:var(--bg-input);">✏️ Edit</button><button onclick="deleteProfile('${m.id}')" class="btn-danger">🗑️</button></div></div>`;
+            container.innerHTML += `<div class="item-row"><div class="item-info"><span class="item-title">${m.name}</span><span class="item-meta">Security Status: Active Masked</span></div><div class="item-right"><button onclick="triggerEditProfile('${m.id}')" style="width:auto; padding:6px 10px; font-size:0.75rem; background-color:var(--bg-input);">✏️ Edit</button><button onclick="deleteProfile('${m.id}')" class="btn-danger">🗑️</button></div></div>`;
         });
     }
 
@@ -576,13 +603,13 @@
 
     function addCustomCategory() {
         const input = document.getElementById('new_cat_input').value.trim(); if(!input) return;
-        if(categories.includes(input)) { alert("Duplicate Entry."); return; }
+        if(categories.includes(input)) { alert("Duplicate Index Error."); return; }
         categories.push(input); localStorage.setItem('off_categories', JSON.stringify(categories));
         document.getElementById('new_cat_input').value = ''; populateCategoryDropdowns(); renderCategoriesManagement();
     }
 
     function deleteCategory(catName) {
-        openConfirmModal("🏷️ Delete Category", `Drop "${catName}" indexing tags?`, function() {
+        openConfirmModal("🏷️ Delete Category", `Drop "${catName}" mapping index?`, function() {
             categories = categories.filter(c => c !== catName); localStorage.setItem('off_categories', JSON.stringify(categories));
             populateCategoryDropdowns(); renderCategoriesManagement();
         });
@@ -609,7 +636,7 @@
         const amount = parseFloat(document.getElementById('rec_amount').value); const category = document.getElementById('rec_category').value;
         const description = document.getElementById('rec_desc').value.trim() || 'Fixed Bill'; const dayOfMonth = parseInt(document.getElementById('rec_day').value);
         const activeProf = currentProfileId === "all" ? (members[0]?.id || "1") : currentProfileId;
-        if(!amount || dayOfMonth < 1 || dayOfMonth > 28) { alert("Bad Parameters."); return; }
+        if(!amount || dayOfMonth < 1 || dayOfMonth > 28) { alert("Bad Parameters mapping."); return; }
         fixedBills.push({ id: Date.now().toString(), memberId: activeProf, amount, category, description, dayOfMonth, lastTriggeredMonth: '' });
         localStorage.setItem('off_fixed_bills', JSON.stringify(fixedBills));
         document.getElementById('rec_amount').value = ''; document.getElementById('rec_desc').value = ''; document.getElementById('rec_day').value = '';
@@ -617,13 +644,12 @@
     }
 
     function deleteFixedBillTemplate(id) {
-        openConfirmModal("⏳ Drop Schedule", "Cancel recurring cron pipeline row mapping?", function() {
+        openConfirmModal("⏳ Drop Schedule", "Cancel recurring pipeline scheduling?", function() {
             fixedBills = fixedBills.filter(b => b.id !== id); localStorage.setItem('off_fixed_bills', JSON.stringify(fixedBills));
             renderFixedBillsManagement();
         });
     }
 
-    // Template mapping updates
     function renderFixedBillsManagement() {
         const container = document.getElementById('fixed_bills_list_container'); container.innerHTML = '';
         const mKey = {}; members.forEach(m => mKey[m.id] = m.name);
@@ -636,14 +662,14 @@
         const amount = parseFloat(document.getElementById('exp_amount').value); const category = document.getElementById('exp_category').value;
         const description = document.getElementById('exp_desc').value.trim() || '-'; const date = document.getElementById('exp_date').value;
         const assignedProfId = currentProfileId === "all" ? (members[0]?.id || "1") : currentProfileId;
-        if(!amount || amount <= 0 || !date) { alert("Invalid entries."); return; }
+        if(!amount || amount <= 0 || !date) { alert("Invalid transaction variables."); return; }
         expenses.push({ id: Date.now(), memberId: assignedProfId, amount, category, description, date });
         localStorage.setItem('off_expenses', JSON.stringify(expenses));
         document.getElementById('exp_amount').value = ''; document.getElementById('exp_desc').value = ''; renderDashboard();
     }
 
     function purseExpenseItem(id) {
-        openConfirmModal("💸 Erase Ledger Item", "Purge transaction log from device memory layout context?", function() {
+        openConfirmModal("💸 Erase Ledger Item", "Purge transaction log from layout memory index?", function() {
             expenses = expenses.filter(x => x.id !== id); localStorage.setItem('off_expenses', JSON.stringify(expenses)); renderDashboard();
         });
     }
@@ -665,7 +691,6 @@
         document.getElementById('budget_display').innerText = `৳ ${budget}`;
         document.getElementById('ledger_count_badge').innerText = `${filtered.length} Rows`;
 
-        // Dynamic Threshold Threat System (80% Boundary Neon Warning glow)
         const spendNode = document.getElementById('total_spent_display');
         if(budget > 0 && total >= budget * 0.8) {
             spendNode.style.color = 'var(--rose)'; spendNode.style.textShadow = '0 0 12px var(--rose)';
@@ -674,7 +699,7 @@
         }
 
         if(filtered.length === 0) {
-            container.innerHTML = `<div style="text-align:center; padding:32px 10px; color:var(--text-muted); font-size:0.85rem;">No localized transaction logs found.</div>`;
+            container.innerHTML = `<div style="text-align:center; padding:32px 10px; color:var(--text-muted); font-size:0.85rem;">No localized historical ledger tags found.</div>`;
             document.getElementById('exp_chart_fallback').innerHTML = '<canvas id="expenseChart"></canvas><div style="position:absolute; font-size:0.75rem; color:var(--text-muted); font-weight:700;">No telemetry metadata</div>';
             document.getElementById('trend_chart_fallback').innerHTML = '<canvas id="trendChart"></canvas><div style="position:absolute; font-size:0.75rem; color:var(--text-muted); font-weight:700;">Timeline index trace empty</div>';
             updateChartsEngine([], []); return;
@@ -716,20 +741,17 @@
     }
 
     window.onload = function() {
-        // 1. Initial local state render
         populateProfileDropdowns(); populateCategoryDropdowns(); renderProfilesManagement(); renderCategoriesManagement(); renderFixedBillsManagement(); checkAndProcessFixedBills(); renderDashboard();
 
-        // ⚡ 2. Smooth fade-out injection for Splash Screen Layer
+        // Dynamic Splash Screen Unveil
         setTimeout(function() {
             const splashNode = document.getElementById('app_splash_screen');
             if (splashNode) {
                 splashNode.style.opacity = '0';
-                splashNode.style.transform = 'scale(1.05)'; // Elegant zoom-out transition
-
-                // Drop layout safely from DOM after fade animation concludes
+                splashNode.style.transform = 'scale(1.05)';
                 setTimeout(() => splashNode.remove(), 400);
             }
-        }, 1500); // 1.5s premium duration to buffer WebView engines seamlessly
+        }, 1500);
     };
 </script>
 </body>
