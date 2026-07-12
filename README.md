@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/icon.png" alt="App Logo" width="180" height="180" />"
+  <img src="https://raw.githubusercontent.com/MI-Musanna/FamExpenSync-App/main/app/src/main/assets/icon.png" width="180" height="180" />"
 </p>
 
 <p align="center">
