@@ -5,7 +5,9 @@
 <p align="center">
   <!-- ২. অ্যান্ড্রয়েড প্ল্যাটফর্ম ব্যাজ (শুধুমাত্র ব্যাজ, কোনো লিংক নেই) -->
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white&labelColor=3DDC84&color=3DDC84" alt="Android Platform" />
-  </a>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;
+
   <a href="https://github.com/MI-Musanna/FamExpenSync-App/releases">
     <img src="https://img.shields.io/badge/Latest-Release-000000?style=for-the-badge&labelColor=000000&color=FFFFFF" alt="Downloads" />
   </a>
