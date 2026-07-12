@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="[YOUR_LOGO_URL_HERE](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi64yrMLFyOpcWrYi58c19s2wyRk3iKOLYl9PsDN9yJbWi2V3KxMRJqTMz28Cj7rch-JQ-iqVeA0tGpPGk5w4Q1DyW9Xbp2EPpWd958gqBfE29rkghSL4xyEYbV26u0OTYVxy3hPTK1ADf0zavLPnI62argDznD9z3O4DG1evKAXfe_EHk/s1600/icon.png)" alt="App Logo" width="180" height="180" />
+</p>
+
+<p align="center">
+  <!-- ২. অ্যান্ড্রয়েড প্ল্যাটফর্ম ব্যাজ (শুধুমাত্র ব্যাজ, কোনো লিংক নেই) -->
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white&labelColor=3DDC84&color=3DDC84" alt="Android Platform" />
+  </a>
+  <a href="[Latest Version](https://github.com/MI-Musanna/FamExpenSync-App/releases)">
+    <img src="https://img.shields.io/badge/DOWNLOADS-253K-000000?style=for-the-badge&labelColor=000000&color=FFFFFF" alt="Downloads" />
+  </a>
+</p>
+
 # FamExpenSync - Android Core 📊🏠
 
 A production-grade, 100% offline standalone family expense tracker engineered for high-density storage and localized data management. Built using a hybrid architecture with a Kotlin WebView wrapper and a premium responsive frontend.
