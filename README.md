@@ -1,7 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MI-Musanna/FamExpenSync-App/main/app/src/main/assets/icon.png" alt="FamExpenSync Logo" width="180" height="180" style="background: transparent !important; border: none !important; box-shadow: none !important;" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MI-Musanna/FamExpenSync-App/main/app/src/main/assets/icon.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MI-Musanna/FamExpenSync-App/main/app/src/main/assets/icon.png">
+    <img alt="FamExpenSync Logo" src="https://raw.githubusercontent.com/MI-Musanna/FamExpenSync-App/main/app/src/main/assets/icon.png" width="180" height="180" />
+  </picture>
 </p>
-
 <p align="center">
   <!-- ২. অ্যান্ড্রয়েড প্ল্যাটফর্ম ব্যাজ (শুধুমাত্র ব্যাজ, কোনো লিংক নেই) -->
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white&labelColor=3DDC84&color=3DDC84" alt="Android Platform" />
