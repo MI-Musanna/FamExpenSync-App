@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi64yrMLFyOpcWrYi58c19s2wyRk3iKOLYl9PsDN9yJbWi2V3KxMRJqTMz28Cj7rch-JQ-iqVeA0tGpPGk5w4Q1DyW9Xbp2EPpWd958gqBfE29rkghSL4xyEYbV26u0OTYVxy3hPTK1ADf0zavLPnI62argDznD9z3O4DG1evKAXfe_EHk/s1600/icon.png" alt="App Logo" width="180" height="180" />
+  <img src="<img src="./assets/icon.png" alt="App Logo" width="180" height="180" />" alt="App Logo" width="180" height="180" />
 </p>
 
 <p align="center">
